@@ -1,0 +1,18 @@
+
+/* Shown near your comment box. */
+.retaggrInfo{
+	display:inline; /* Set to none to hide */
+}
+
+
+.retaggr_notice{
+	background-color:#CC3333;
+	border:solid 1px black;
+	text-align:left;
+	padding:10px;
+	color:#FFF;
+}
+
+.retaggr_notice a{
+	color:white;
+}
