@@ -7,7 +7,7 @@ Requires at least: 2.0.4
 Tested up to: 2.5.1
 Stable tag: 1.0
 
-Add retaggr.com functionality to your blog - image tagging of any image, and totally customizable Profile Cards. Demo and help at http://www.retaggr.com
+Add retaggr.com functionality to your blog - image tagging of any image,and totally customizable Profile Cards.Demo and help at http://www.retaggr.com
 
 == Description ==
 
