@@ -70,3 +70,7 @@ Don't hesitate to drop us a line via the retaggr.com website if you need anythin
 
 * Initial release.
 
+= 1.01 =
+
+* Minor change to amend domain for script
+

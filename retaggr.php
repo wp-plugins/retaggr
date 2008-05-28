@@ -4,7 +4,7 @@ Plugin Name: retaggr
 Plugin URI: http://www.retaggr.com/
 Description: retaggr
 Author: retaggr
-Version: 1.0
+Version: 1.01
 Author URI: http://www.retaggr.com/
  * Min WP Version: 2.0.4
  * Max WP Version: 2.5.1
@@ -106,7 +106,7 @@ function ri_retaggrcomment($text) {
 function ri_wp_footer(){
 	$opts = ri_get_options();
 	$ri_siteid = $opts['ri_siteid'];
-	echo "<script language='javascript' src='http://www.retaggr.com/Script/GetScript.ashx?siteID=" . $ri_siteid . "'></script>";
+	echo "<script language='javascript' src='http://script.retaggr.com/Script/GetScript.ashx?siteID=" . $ri_siteid . "'></script>";
 }
 
 add_action('wp_footer', 'ri_wp_footer');
