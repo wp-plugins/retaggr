@@ -4,7 +4,7 @@ Plugin Name: retaggr
 Plugin URI: http://www.retaggr.com/
 Description: retaggr
 Author: retaggr
-Version: 1.01
+Version: 1.02
 Author URI: http://www.retaggr.com/
  * Min WP Version: 2.0.4
  * Max WP Version: 2.5.1

@@ -4,6 +4,10 @@
 	display:inline; /* Set to none to hide */
 }
 
+.retaggrInfo img{
+	border:0;
+}
+
 
 .retaggr_notice{
 	background-color:#CC3333;

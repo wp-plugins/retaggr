@@ -74,3 +74,5 @@ Don't hesitate to drop us a line via the retaggr.com website if you need anythin
 
 * Minor change to amend domain for script
 
+= 1.02 =
+* Minor change to update CSS 
