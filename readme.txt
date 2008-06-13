@@ -5,7 +5,7 @@ Donate link:
 Tags: comments, identity, profiles, avatars, personalization, retaggr, image tagging
 Requires at least: 2.0.4
 Tested up to: 2.5.1
-Stable tag: 1.01
+Stable tag: 1.03
 
 Add retaggr.com functionality to your blog - image tagging of any image,and totally customizable Profile Cards.Demo and help at http://www.retaggr.com
 
@@ -76,3 +76,6 @@ Don't hesitate to drop us a line via the retaggr.com website if you need anythin
 
 = 1.02 =
 * Minor change to update CSS 
+
+= 1.03 = 
+Modification to ensure no changes are made to any content going out to RSS feed.
