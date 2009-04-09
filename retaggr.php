@@ -1,23 +1,35 @@
 <?php
 /*
-Plugin Name: retaggr
+Plugin Name: Retaggr
 Plugin URI: http://www.retaggr.com/
-Description: retaggr
-Author: retaggr
-Version: 1.03
+Description: Retaggr - Adds Retaggr social/business cards to your comments
+Author: Retaggr
+Version: 1.14
 Author URI: http://www.retaggr.com/
  * Min WP Version: 2.0.4
- * Max WP Version: 2.5.1
+ * Max WP Version: 2.7.1
 */
 
 
+// Register our activation hook, so we can set our default options:
+register_activation_hook(_FILE_,'ri_activate');
+
+function ri_activate() {
+	/*
+	$ri_opt_siteid = get_option('ri_siteid');
+	if ( empty($ri_opt_size) ) {
+		$defaults = ri_defaults();
+		foreach ($defaults as $key => $val) {
+			update_option($key, $val);
+		}
+	}*/
+}
 
 add_action('admin_head', 'ri_css');
 add_action('wp_head', 'ri_css');
 add_action('the_author', 'ri_author');
 
 function ri_author($author){
-	if (is_feed()) return $author;
 	
 	$email = get_the_author_email();
 	if ( !empty( $email ) ) {
@@ -43,7 +55,7 @@ function ri_css() {
 
 
 function ri_addCommentHint($postID){
-	echo "<div class='retaggrInfo'><a target='_blank' href='http://www.retaggr.com/WhatIs'><img alt='retaggr' title='This site is retaggr enabled' src='http://content.retaggr.com/static/retaggrEnabled.gif' /></a></div>";
+	echo "<div class='retaggrInfo'><a target='_blank' href='http://www.retaggr.com/WhatIs'><img alt='retaggr' title='This site is Retaggr enabled' src='http://content.retaggr.com/static/retaggrEnabled.gif' /></a></div>";
 }
 
 
@@ -77,8 +89,6 @@ function ri_get_options() {
 
 
 function ri_retaggrcomment($text) {
-	if (is_feed()) return $text;
-	
 	global $comment;
 	// emit retaggr card if email present
 	
@@ -96,7 +106,7 @@ function ri_retaggrcomment($text) {
 function ri_wp_footer(){
 	$opts = ri_get_options();
 	$ri_siteid = $opts['ri_siteid'];
-	echo "<script language='javascript' src='http://script.retaggr.com/Script/GetScript.ashx?siteID=" . $ri_siteid . "'></script>";
+	echo "<script language='javascript' src='http://www.retaggr.com/Script/GetScript.ashx?siteID=" . $ri_siteid . "'></script>";
 }
 
 add_action('wp_footer', 'ri_wp_footer');
@@ -118,7 +128,7 @@ function ri_admin_notices(){
 	if (empty($_POST['ri_siteid']) && empty($opts['ri_siteid'])){
 	?>
 	<div class="error">
-		One more step to enable retaggr. Please visit the retaggr section of your settings.
+		One more step needed to enable Retaggr. Please visit the Retaggr section in your Wordpress settings.
 	</div>
 	<?php
 	}
@@ -149,7 +159,7 @@ function reIdent_options_page() {
 // Admin form:
 ?>
 <div class="wrap">
-<h2><?php _e( 'retaggr Plugin Options'); ?></h2>
+<h2><?php _e( 'Retaggr Plugin Options'); ?></h2>
 
 
 <form id="reIdent" name="ri_opts" method="post"  >
@@ -167,7 +177,7 @@ function reIdent_options_page() {
 
 	<p class="error">
 		Hi! 
-		To get retaggr to work, you need a site ID.  <br /><br />You can get this site ID (and configure options about how you want retaggr to work on your site) <a href="http://www.retaggr.com/GetSiteID" target="_blank">here</a>
+		To get Retaggr to work, you need a Retaggr site ID.  <br /><br />You can get this site ID (and configure options about how you want Retaggr to work on your site) <a href="http://www.retaggr.com/GetSiteID" target="_blank">here</a>
 	</p>
 	
 
@@ -188,7 +198,7 @@ function reIdent_options_page() {
 
 
 
-<a href="http://www.retaggr.com/Site/List">Change other site settings on the retaggr site</a>
+<a href="http://www.retaggr.com/Site/List">Change other settings at Retaggr</a>
 
 
 </p>

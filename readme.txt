@@ -4,23 +4,23 @@ Contributors: retaggr
 Donate link: 
 Tags: comments, identity, profiles, avatars, personalization, retaggr, image tagging
 Requires at least: 2.0.4
-Tested up to: 2.5.1
-Stable tag: 1.03
+Tested up to: 2.7.1
+Stable tag: 1.04
 
 Add retaggr.com functionality to your blog - image tagging of any image,and totally customizable Profile Cards.Demo and help at http://www.retaggr.com
 
 == Description ==
 
-This plugin adds the retaggr functionality to your blog.  
+This plugin adds the Retaggr functionality to your blog.  
 
 ** IDENTITY **
 
-The retaggr Profile Card is about identity - its a virtual, interactive business card which you can customize as you wish. 
+The Retaggr Profile Card is about identity - its a virtual, interactive business card which you can customize as you wish. 
 Widgets can be added into it to show posts from your blog,music you're currently listening to, allow communication via IM, or pretty much
 Consolidate all your identity widgets on your blog into one, and add custom widgets from anywhere on the web. Built-in widgets include support for Twitter, FriendFeed, Flickr, MSN, and Disqus, to name a just a few.
 
 
-People use retaggr Profile Cards to bring traffic to their blog and express their identity. A demo can be found at retaggr.com.
+People use Retaggr Profile Cards to bring traffic to their blog and express their identity. A demo can be found at retaggr.com.
 
 Installing this plugin means :
 
@@ -79,3 +79,6 @@ Don't hesitate to drop us a line via the retaggr.com website if you need anythin
 
 = 1.03 = 
 Modification to ensure no changes are made to any content going out to RSS feed.
+
+= 1.04 =
+Updates to ensure compatible with 2.7.1, minor cosmetics.
