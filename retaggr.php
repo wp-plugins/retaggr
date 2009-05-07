@@ -4,32 +4,19 @@ Plugin Name: Retaggr
 Plugin URI: http://www.retaggr.com/
 Description: Retaggr - Adds Retaggr social/business cards to your comments
 Author: Retaggr
-Version: 1.14
+Version: 1.15
 Author URI: http://www.retaggr.com/
  * Min WP Version: 2.0.4
  * Max WP Version: 2.7.1
 */
 
 
-// Register our activation hook, so we can set our default options:
-register_activation_hook(_FILE_,'ri_activate');
-
-function ri_activate() {
-	/*
-	$ri_opt_siteid = get_option('ri_siteid');
-	if ( empty($ri_opt_size) ) {
-		$defaults = ri_defaults();
-		foreach ($defaults as $key => $val) {
-			update_option($key, $val);
-		}
-	}*/
-}
-
 add_action('admin_head', 'ri_css');
 add_action('wp_head', 'ri_css');
 add_action('the_author', 'ri_author');
 
 function ri_author($author){
+	if (is_feed()) return $author;
 	
 	$email = get_the_author_email();
 	if ( !empty( $email ) ) {
@@ -89,6 +76,9 @@ function ri_get_options() {
 
 
 function ri_retaggrcomment($text) {
+	if (is_feed()) return $text;
+
+	
 	global $comment;
 	// emit retaggr card if email present
 	
